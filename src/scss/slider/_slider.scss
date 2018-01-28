@@ -26,17 +26,12 @@
 
 .slider-track {
   overflow: hidden;
-
-  width: inherit;
-  height: inherit;
 }
 
 .slide {
   position: absolute;
+  float: left;
   z-index: 0;
-
-  width: inherit;
-  height: inherit;
 
   transition: ease-in-out .5s;
   transform: scale(0);
@@ -89,7 +84,9 @@
 #slide1:checked~.slider-controls label:nth-of-type(1),
 #slide2:checked~.slider-controls label:nth-of-type(2),
 #slide3:checked~.slider-controls label:nth-of-type(3),
-#slide4:checked~.slider-controls label:nth-of-type(4) {
+#slide11:checked~.slider-controls label:nth-of-type(1),
+#slide12:checked~.slider-controls label:nth-of-type(2),
+#slide13:checked~.slider-controls label:nth-of-type(3) {
   opacity: 1;
   &::before {
     transform: scale(1);
@@ -99,7 +96,9 @@
 #slide1:checked~.slider-track>.slide:nth-of-type(1),
 #slide2:checked~.slider-track>.slide:nth-of-type(2),
 #slide3:checked~.slider-track>.slide:nth-of-type(3),
-#slide4:checked~.slider-track>.slide:nth-of-type(4) {
+#slide11:checked~.slider-track>.slide:nth-of-type(1),
+#slide12:checked~.slider-track>.slide:nth-of-type(2),
+#slide13:checked~.slider-track>.slide:nth-of-type(3) {
   z-index: 1;
 
   transform: scale(1);

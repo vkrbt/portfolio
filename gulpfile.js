@@ -16,9 +16,9 @@ const src = {
 };
 
 const dist = {
-  root: './dist',
+  root: './dist/',
   css: './dist/css/',
-  img: './dist/img',
+  img: './dist/img/',
 };
 
 gulp.task('scss', () => gulp
@@ -34,7 +34,7 @@ gulp.task('img', () => gulp
   .src(src.img)
   .pipe(imagemin([
     imagemin.jpegtran({ progressive: true }),
-    imagemin.optipng({ optimizationLevel: 5 })
+    imagemin.optipng({ optimizationLevel: 5 }),
   ]))
   .pipe(gulp.dest(dist.img))
 );

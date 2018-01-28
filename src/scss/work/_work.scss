@@ -1,0 +1,9 @@
+.slider-work {
+  height: 216px;
+  &__image {
+    width: 100%;
+
+    background-image: url(../img/slide.png);
+    background-size: cover;
+  }
+}
