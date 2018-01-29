@@ -1,27 +1,13 @@
 .slider {
   position: relative;
 
-  margin-bottom: 56px;
+  margin-bottom: 32px;
   @media (min-width: $bp_tablet_horizontal) {
     margin-bottom: 0;
-    margin-left: 40px;
+    margin-left: 24px;
   }
   >input {
     display: none;
-  }
-}
-
-@media (min-width: $bp_tablet_horizontal) {
-  .slider--right-control {
-    flex-direction: column;
-
-    width: 40px;
-    margin-right: 40px;
-    .slider-controls {
-      top: 0;
-      bottom: 0;
-      left: 100%;
-    }
   }
 }
 
@@ -34,9 +20,14 @@
       position: static;
       z-index: 1;
 
+      height: 100%;
+
       transform: initial;
 
       opacity: 1;
+      @media (min-width: $bp_tablet_vertical) {
+        height: initial;
+      }
     }
     .slider-track {
       overflow: visible;
@@ -49,14 +40,16 @@
 
 .slider-track {
   overflow: hidden;
+
+  height: inherit;
 }
 
 .slide {
   position: absolute;
-  float: left;
   z-index: 0;
 
   display: flex;
+  float: left;
   flex-direction: column;
 
   width: 100%;
@@ -93,21 +86,21 @@
 
     flex-direction: column;
 
-    width: 40px;
+    width: 24px;
   }
   >label {
     position: relative;
 
     width: 8px;
     height: 8px;
-    margin: 24px 12px;
+    margin: 24px 12px 0;
 
     cursor: pointer;
 
     border-radius: 50%;
     background-color: $color_accent;
     @media (min-width: $bp_tablet_horizontal) {
-      margin: 12px 16px;
+      margin: 12px 16px 12px 0;
     }
     &::before {
       position: absolute;
@@ -127,6 +120,24 @@
       transition: opacity .2s ease-out;
 
       opacity: 0.7;
+    }
+  }
+}
+
+@media (min-width: $bp_tablet_horizontal) {
+  .slider--right-control {
+    flex-direction: column;
+
+    margin-right: 24px;
+    .slider-controls {
+      top: 0;
+      bottom: 0;
+      left: 100%;
+
+      width: 24px;
+      >label {
+        margin: 12px 0 12px 16px;
+      }
     }
   }
 }
