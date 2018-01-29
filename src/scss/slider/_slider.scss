@@ -111,7 +111,8 @@
 
       content: '';
       transition: transform .2s ease-out;
-      transform: scale(0);
+      transform: rotateX(-90deg);
+      transform-origin: 0 100%;
 
       border-radius: 50%;
       background-color: #000;
@@ -153,7 +154,7 @@
 #slide23:checked~.slider-controls label:nth-of-type(3) {
   opacity: 1;
   &::before {
-    transform: scale(1);
+    transform: rotateX(0);
   }
 }
 
