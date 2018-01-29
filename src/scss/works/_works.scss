@@ -1,0 +1,114 @@
+.container--works {
+  padding-top: 83px;
+}
+
+.slider--work {
+  height: 216px;
+  @media (min-width: $bp_tablet_vertical) {
+    height: 496px;
+  }
+  @media (min-width: $bp_tablet_vertical) {
+    height: 384px;
+  }
+}
+
+.works {
+  &__headline {
+    order: 0;
+
+    width: 100%;
+    @media (min-width: $bp_tablet_horizontal) {
+      margin-bottom: 63px;
+    }
+  }
+}
+
+.work {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: $bp_tablet_horizontal) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    order: 1;
+    @media (min-width: $bp_tablet_vertical) {
+      flex-direction: row;
+    }
+    @media (min-width: $bp_tablet_horizontal) {
+      flex-direction: column;
+      flex-grow: 1;
+
+      width: 30%;
+    }
+  }
+  &__main-info {
+    @media (min-width: $bp_tablet_vertical) {
+      flex-grow: 1;
+
+      max-width: 50%;
+    }
+    @media (min-width: $bp_tablet_horizontal) {
+      max-width: 100%;
+    }
+  }
+  &__subheader {
+    margin-top: 38px;
+    @media (min-width: $bp_tablet_vertical) {
+      margin-top: 0;
+    }
+  }
+  &__link {
+    margin-top: 8px;
+
+    color: $color_accent;
+  }
+  &__paragraph {
+    flex-grow: 1;
+
+    margin-top: 16px;
+    @media (min-width: $bp_tablet_vertical) {
+      flex-grow: 1;
+
+      max-width: 50%;
+    }
+    @media (min-width: $bp_tablet_horizontal) {
+      display: flex;
+      align-items: flex-end;
+
+      max-width: 100%;
+    }
+  }
+  &__slider {
+    order: 2;
+
+    margin-top: 15px;
+    @media (min-width: $bp_tablet_horizontal) {
+      flex-grow: 1;
+
+      width: calc(70% - 96px);
+      max-width: calc(70% - 96px);
+      margin-top: 0;
+      margin-left: 96px;
+    }
+    .slide__image {
+      box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.4);
+    }
+  }
+}
+
+@media (min-width: $bp_tablet_horizontal) {
+  .work--right-info {
+    .work__info {
+      order: 2;
+    }
+    .work__slider {
+      order: 1;
+
+      margin-right: 96px;
+      margin-left: 0;
+    }
+  }
+}

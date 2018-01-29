@@ -22,24 +22,24 @@
       </div>
     </header>
   </div>
-  <section class="container container--expectation">
+  <section class="container container--expectations">
     <h2>Ожидания от ШРИ</h2>
-    <div class="slider slider--only-mobile expectation">
+    <div class="slider slider--only-mobile expectations">
       <input type="radio" name="bullet" id="slide1" checked>
       <input type="radio" name="bullet" id="slide2">
       <input type="radio" name="bullet" id="slide3">
       <div class="slider-track">
-        <div class="slide expectation__tile">
+        <div class="slide expectations__tile">
           <h3>Мир</h3>
-          <p class="expectation__paragraph">Дружелюбное отношение, здоровый дух соперничества, много новой информации, лучшие практики используемые в компании. Мне нравится перспектива поучиться у сотрудников компании, которые трудятся в Яндексе.</p>
+          <p class="expectations__paragraph">Дружелюбное отношение, здоровый дух соперничества, много новой информации, лучшие практики используемые в компании. Мне нравится перспектива поучиться у сотрудников компании, которые трудятся в Яндексе.</p>
         </div>
-        <div class="slide expectation__tile">
+        <div class="slide expectations__tile">
           <h3>Труд</h3>
-          <p class="expectation__paragraph">Усердная работа над интересным заданиями(пока не знаю, на сколько интересным, но судя по тестовому заданию, они будут классными).</p>
+          <p class="expectations__paragraph">Усердная работа над интересным заданиями(пока не знаю, на сколько интересным, но судя по тестовому заданию, они будут классными).</p>
         </div>
-        <div class="slide expectation__tile">
+        <div class="slide expectations__tile">
           <h3>Май</h3>
-          <p class="expectation__paragraph">Если я все правильно посчитал, то оконачание курсов будет в конце мая. К концу обучения я хочу получить много новых знаний, касательно разработки интерфейсов.</p>
+          <p class="expectations__paragraph">Если я все правильно посчитал, то оконачание курсов будет в конце мая. К концу обучения я хочу получить много новых знаний, касательно разработки интерфейсов.</p>
         </div>
       </div>
       <div class="slider-controls">
@@ -49,20 +49,32 @@
       </div>
     </div>
   </section>
-  <!-- <section class="container">
-    <h2>Мои работы</h2>
-    <div>
-      <h3>Моды и шляпы</h3>
-      <a href="">lamoda.ru</a>
-      <p>Межзвездная матеpия на следующий год, когда было лунное затмение и сгорел древний храм Афины в Афинах (при эфоре Питии и афинском архонте Каллии), многопланово перечеркивает ионный хвост.</p>
-      <div class="slider slider-work">
+  <section class="container container--works works">
+    <h2 class="works__headline">Мои работы</h2>
+    <article class="work work--right-info">
+      <div class="work__info">
+        <div class="work__main-info">
+          <h3 class="work__subheader">Моды и шляпы</h3>
+          <a class="work__link" href="">lamoda.ru</a>
+        </div>
+        <p class="work__paragraph">
+          Межзвездная матеpия на следующий год, когда было лунное затмение и сгорел древний храм Афины в Афинах (при эфоре Питии и афинском архонте Каллии), многопланово перечеркивает ионный хвост.
+        </p>
+      </div>
+      <div class="slider slider--work slider--right-control work__slider">
         <input type="radio" name="bullet1" id="slide11" checked>
         <input type="radio" name="bullet1" id="slide12">
         <input type="radio" name="bullet1" id="slide13">
         <div class="slider-track">
-          <div class="slide slider-work__image"></div>
-          <div class="slide slider-work__image"></div>
-          <div class="slide slider-work__image"></div>
+          <div class="slide">
+            <img class="slide__image" src="/img/img.jpg" alt>
+          </div>
+          <div class="slide">
+            <img class="slide__image" src="/img/img.jpg" alt>
+          </div>
+          <div class="slide">
+            <img class="slide__image" src="/img/img.jpg" alt>
+          </div>
         </div>
         <div class="slider-controls">
           <label for="slide11"></label>
@@ -70,8 +82,40 @@
           <label for="slide13"></label>
         </div>
       </div>
-    </div>
-  </section> -->
+    </article>
+    <article class="work">
+        <div class="work__info">
+          <div class="work__main-info">
+            <h3 class="work__subheader">Моды и шляпы</h3>
+            <a class="work__link" href="">lamoda.ru</a>
+          </div>
+          <p class="work__paragraph">
+            Межзвездная матеpия на следующий год, когда было лунное затмение и сгорел древний храм Афины в Афинах (при эфоре Питии и афинском архонте Каллии), многопланово перечеркивает ионный хвост.
+          </p>
+        </div>
+        <div class="slider slider--work work__slider">
+          <input type="radio" name="bullet2" id="slide21" checked>
+          <input type="radio" name="bullet2" id="slide22">
+          <input type="radio" name="bullet2" id="slide23">
+          <div class="slider-track">
+            <div class="slide">
+              <img class="slide__image" src="/img/img.jpg" alt>
+            </div>
+            <div class="slide">
+              <img class="slide__image" src="/img/img.jpg" alt>
+            </div>
+            <div class="slide">
+              <img class="slide__image" src="/img/img.jpg" alt>
+            </div>
+          </div>
+          <div class="slider-controls">
+            <label for="slide21"></label>
+            <label for="slide22"></label>
+            <label for="slide23"></label>
+          </div>
+        </div>
+      </article>
+  </section>
 </body>
 
 </html>

@@ -49,6 +49,14 @@ p {
   line-height: 24px;
 }
 
+a {
+  display: block;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 .container {
   box-sizing: border-box;
   padding-right: 15px;
@@ -67,4 +75,10 @@ p {
 
 .wrapper {
   position: relative;
+}
+
+.section {
+  &__headline {
+    margin-bottom: 38px;
+  }
 }

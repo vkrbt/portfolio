@@ -1,12 +1,35 @@
 .slider {
   position: relative;
+
+  margin-bottom: 56px;
+  @media (min-width: $bp_tablet_horizontal) {
+    margin-bottom: 0;
+    margin-left: 40px;
+  }
   >input {
     display: none;
   }
 }
 
+@media (min-width: $bp_tablet_horizontal) {
+  .slider--right-control {
+    flex-direction: column;
+
+    width: 40px;
+    margin-right: 40px;
+    .slider-controls {
+      top: 0;
+      bottom: 0;
+      left: 100%;
+    }
+  }
+}
+
 @media (min-width: $bp_tablet_vertical) {
   .slider--only-mobile {
+    .slider {
+      margin-bottom: 0;
+    }
     .slide {
       position: static;
       z-index: 1;
@@ -33,10 +56,24 @@
   float: left;
   z-index: 0;
 
-  transition: ease-in-out .5s;
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: inherit;
+
+  transition: transform ease-in-out .5s, opacity ease-in-out .5s;
   transform: scale(0);
 
   opacity: 0;
+  &__image {
+    display: block;
+
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    margin: auto;
+  }
 }
 
 .slider-controls {
@@ -48,6 +85,16 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  @media (min-width: $bp_tablet_horizontal) {
+    top: 0;
+    right: 100%;
+    bottom: 0;
+    left: unset;
+
+    flex-direction: column;
+
+    width: 40px;
+  }
   >label {
     position: relative;
 
@@ -58,7 +105,10 @@
     cursor: pointer;
 
     border-radius: 50%;
-    background-color: #DD3E18;
+    background-color: $color_accent;
+    @media (min-width: $bp_tablet_horizontal) {
+      margin: 12px 16px;
+    }
     &::before {
       position: absolute;
       top: 0;
@@ -86,7 +136,10 @@
 #slide3:checked~.slider-controls label:nth-of-type(3),
 #slide11:checked~.slider-controls label:nth-of-type(1),
 #slide12:checked~.slider-controls label:nth-of-type(2),
-#slide13:checked~.slider-controls label:nth-of-type(3) {
+#slide13:checked~.slider-controls label:nth-of-type(3),
+#slide21:checked~.slider-controls label:nth-of-type(1),
+#slide22:checked~.slider-controls label:nth-of-type(2),
+#slide23:checked~.slider-controls label:nth-of-type(3) {
   opacity: 1;
   &::before {
     transform: scale(1);
@@ -98,7 +151,10 @@
 #slide3:checked~.slider-track>.slide:nth-of-type(3),
 #slide11:checked~.slider-track>.slide:nth-of-type(1),
 #slide12:checked~.slider-track>.slide:nth-of-type(2),
-#slide13:checked~.slider-track>.slide:nth-of-type(3) {
+#slide13:checked~.slider-track>.slide:nth-of-type(3),
+#slide21:checked~.slider-track>.slide:nth-of-type(1),
+#slide22:checked~.slider-track>.slide:nth-of-type(2),
+#slide23:checked~.slider-track>.slide:nth-of-type(3) {
   z-index: 1;
 
   transform: scale(1);
