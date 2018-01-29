@@ -9,6 +9,10 @@
 }
 
 .works {
+  padding-bottom: 88px;
+  @media (min-width: $bp_tablet_horizontal) {
+    padding-bottom: 143px;
+  }
   &__headline {
     order: 0;
 

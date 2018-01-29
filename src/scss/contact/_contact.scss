@@ -1,0 +1,178 @@
+.contact {
+  padding-top: 43px;
+  padding-bottom: 72px;
+
+  background: $bg_gradient;
+  &__social {
+    margin-top: 21px;
+  }
+  &__paragraph {
+    margin-top: 34px;
+  }
+  &__input {
+    margin-top: 24px;
+  }
+  &__textarea {
+    height: 192px;
+
+    resize: vertical;
+  }
+  &__file-input {
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin-top: 16px;
+    padding-left: 32px;
+
+    cursor: pointer;
+
+    color: $color_accent;
+
+    font-family: Helvetica;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    [type=file] {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      cursor: inherit;
+
+      opacity: 0;
+    }
+  }
+  &__file-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 0;
+    width: 16px;
+    height: 0;
+    height: 20px;
+
+    border-bottom: 12px solid $color_accent;
+    border-left: 8px solid $color_accent;
+    &:before {
+      position: absolute;
+
+      width: 0px;
+      height: 0px;
+
+      content: '';
+
+      border: 4px solid transparent;
+      border-bottom-color: #9b2f14;
+      border-left-color: #9b2f14;
+    }
+  }
+  &__submit {
+    margin-top: 35px;
+
+    cursor: pointer;
+    transition: 0.1s ease-out;
+
+    color: #FFFFFF;
+    border-color: $color_accent;
+    background-color: $color_accent;
+
+    font-family: Helvetica;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    &:hover {
+      transform: translateY(-3px);
+
+      box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+.social {
+  &__link {
+    position: relative;
+
+    padding-left: 32px;
+
+    color: $color_accent;
+
+    font-size: 16px;
+    line-height: 32px;
+    &:hover::before {
+      animation: shake 0.5s;
+    }
+    &::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+
+      width: 25px;
+
+      content: '';
+      text-align: center;
+
+      font-family: "Font Awesome 5 Brands";
+      font-size: 20px;
+    }
+  }
+  &__link--fb::before {
+    content: '\f39e';
+  }
+  &__link--vk::before {
+    content: '\f189';
+  }
+  &__link--gh::before {
+    content: '\f09b';
+  }
+}
+
+.input {
+  transition: border 0.2s ease-in;
+
+  border: 1px solid #FFF;
+  &:focus {
+    border: 1px solid rgba(0, 0, 0, 0.10);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotateZ(0);
+  }
+  10% {
+    transform: rotateZ(15deg);
+  }
+  20% {
+    transform: rotateZ(0);
+  }
+  30% {
+    transform: rotateZ(-15deg);
+  }
+  40% {
+    transform: rotateZ(10deg);
+  }
+  50% {
+    transform: rotateZ(0);
+  }
+  60% {
+    transform: rotateZ(-10deg);
+  }
+  70% {
+    transform: rotateZ(-5deg);
+  }
+  80% {
+    transform: rotateZ(0);
+  }
+  90% {
+    transform: rotateZ(-5deg);
+  }
+  100% {
+    transform: rotateZ(0);
+  }
+}
