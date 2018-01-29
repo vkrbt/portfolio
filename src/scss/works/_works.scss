@@ -1,7 +1,3 @@
-.container--works {
-  // padding-top: 83px;
-}
-
 .slider--work {
   height: 216px;
   @media (min-width: $bp_tablet_vertical) {
@@ -23,14 +19,16 @@
 .work {
   display: flex;
   flex-direction: column;
+
   padding-top: 64px;
   &:first-of-type {
     padding-top: 38px;
   }
   @media (min-width: $bp_tablet_horizontal) {
-    padding-top: 135px;
     flex-direction: row;
     flex-wrap: wrap;
+
+    padding-top: 135px;
     &:first-of-type {
       padding-top: 64px;
     }
@@ -69,10 +67,10 @@
 
     margin-top: 16px;
     @media (min-width: $bp_tablet_vertical) {
-      margin-top: 0;
       flex-grow: 1;
 
       max-width: 50%;
+      margin-top: 0;
     }
     @media (min-width: $bp_tablet_horizontal) {
       display: flex;
