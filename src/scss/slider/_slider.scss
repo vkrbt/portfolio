@@ -151,7 +151,13 @@
 #slide13:checked~.slider-controls label:nth-of-type(3),
 #slide21:checked~.slider-controls label:nth-of-type(1),
 #slide22:checked~.slider-controls label:nth-of-type(2),
-#slide23:checked~.slider-controls label:nth-of-type(3) {
+#slide31:checked~.slider-controls label:nth-of-type(1),
+#slide32:checked~.slider-controls label:nth-of-type(2),
+#slide33:checked~.slider-controls label:nth-of-type(3),
+#slide34:checked~.slider-controls label:nth-of-type(4),
+#slide35:checked~.slider-controls label:nth-of-type(5),
+#slide41:checked~.slider-controls label:nth-of-type(1),  
+#slide42:checked~.slider-controls label:nth-of-type(2)  {
   opacity: 1;
   &::before {
     transform: rotateX(0);
@@ -166,7 +172,13 @@
 #slide13:checked~.slider-track>.slide:nth-of-type(3),
 #slide21:checked~.slider-track>.slide:nth-of-type(1),
 #slide22:checked~.slider-track>.slide:nth-of-type(2),
-#slide23:checked~.slider-track>.slide:nth-of-type(3) {
+#slide31:checked~.slider-track>.slide:nth-of-type(1),
+#slide32:checked~.slider-track>.slide:nth-of-type(2),
+#slide33:checked~.slider-track>.slide:nth-of-type(3),
+#slide34:checked~.slider-track>.slide:nth-of-type(4),
+#slide35:checked~.slider-track>.slide:nth-of-type(5),
+#slide41:checked~.slider-track>.slide:nth-of-type(1),
+#slide42:checked~.slider-track>.slide:nth-of-type(2) {
   z-index: 1;
 
   transform: scale(1);
